@@ -1,6 +1,6 @@
 (ns donut.routes-test
   (:require
-   #?@(:clj [[clojure.test :refer :all]]
+   #?@(:clj [[clojure.test :refer [deftest is]]]
        :cljs [[cljs.test :refer [deftest is] :include-macros true]])
    [donut.routes :as der]))
 
