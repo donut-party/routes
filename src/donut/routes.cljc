@@ -2,14 +2,12 @@
   (:require [donut.sugar.utils :as u]))
 
 (defn merge-route-opts
+  "Makes it easier to write cross-compiled routes because you can define them like
+  [\"/path\" {:name :my-route-name} #?@(:clj backend-opts)]"
   [routes]
   (map (fn [[path & opts]]
          [path (apply merge opts)])
        routes))
-
-;;---
-;; helpers
-;;---
 
 (defn routes-by-name
   "produces a map with routes keyed by name"

@@ -1,8 +1,8 @@
 (ns donut.routes-test
   (:require
-   [donut.routes :as der]
    #?@(:clj [[clojure.test :refer :all]]
-       :cljs [[cljs.test :refer [deftest is] :include-macros true]])))
+       :cljs [[cljs.test :refer [deftest is] :include-macros true]])
+   [donut.routes :as der]))
 
 (deftest merge-route-opts-test
   (is (= [["/users" {:name :users, :foo :bar}]]
